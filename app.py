@@ -80,11 +80,35 @@ def spin():
     score = request.json.get('score', random.randint(0, 10))
 
     if 0 <= score <= 3:
-        message = random.choice(["You might need a bit of luck today!", "You're going to have a bad day, so work hard."])
+        message = random.choice([
+            "Oof, today’s not your day. Keep grinding, fam!",
+            "Not the luckiest spin, but keep it 💯, you got this!",
+            "Yikes, bad vibes today. Keep slayin’ though!",
+            "It's a no-go today, but stay woke, you'll bounce back!",
+            "Big L today, but the comeback will be fire!",
+            "A little rough, but keep that hustle up!",
+        ])
     elif 4 <= score <= 7:
-        message = random.choice(["A decent day ahead, keep going!", "Good things come to those who wait."])
+        message = random.choice([
+            "You’re vibing today! Not bad at all.",
+            "Lowkey winning today, keep it going!",
+            "It’s a chill day, but good things are coming!",
+            "You're on the right track, just keep pushing!",
+            "Solid day, don’t let the haters stop you!",
+            "Keep doing your thing, your vibe is unmatched!",
+            "You're serving good energy today!",
+        ])
     else:
-        message = random.choice(["Congratulations! It’s a lucky day!", "Success is inevitable today!"])
+        message = random.choice([
+            "Big W today! You're living your best life!",
+            "No cap, today’s your day! Everything is aligning!",
+            "You’re lowkey glowing today, everything’s going right!",
+            "Catch those good vibes — it’s your time to shine!",
+            "Periodt! Success is yours today!",
+            "Big mood! Everything’s about to pop off!",
+            "You’re giving major main character energy today!",
+            "You’re flexing today! Keep that confidence up!",
+        ])
 
     user = current_user
     today = datetime.utcnow().date()
