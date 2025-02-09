@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheel of Fortune</title>
+    <link rel="stylesheet" href="static/wheelstyle.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        let isSpinning = false;
+
+        function spinWheel() {
+            if (isSpinning) return;
+            isSpinning = true;
+
+            const wheel = document.getElementById("wheel");
+            const resultText = document.getElementById("result-text");
+            const messageText = document.getElementById("message-text");
+
+            resultText.innerText = "Spinning...";
+            messageText.innerText = "";
+
+            const spinDegrees = Math.floor(Math.random() * 3600 + 360);
+            wheel.style.transform = `rotate(${spinDegrees}deg)`;
+
+            setTimeout(() => {
+                fetch("/spin", {
+                    method: "POST",
+                    body: JSON.stringify({ score: Math.floor(Math.random() * 11) }),
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                })
+                .then(response => response.json())
+                .then(data => {
+                    resultText.innerText = `Your fortune score: ${data.score}`;
+                    messageText.innerText = data.message;
+                    document.getElementById("streak").innerText = `Lucky Streak: ${data.streak} days`;
+                    document.getElementById("last-lucky-day").innerText = `Last Lucky Day: ${data.last_lucky_day || "N/A"}`;
+                    isSpinning = false;
+                });
+            }, 4000);
+        }
+    </script>
+</head>
+<body>
+    <header class="app-bar">
+        <div class="streak-info">
+            <i class="fas fa-fire"></i>
+            <span id="streak">Lucky Streak: {{ streak }} days</span>
+        </div>
+        <div class="date-info">
+            <span id="last-lucky-day">Last Lucky Day: {{ last_lucky_day }}</span>
+        </div>
+        <div class="logout-button">
+            <a href="{{ url_for('logout') }}" class="logout-link">Logout</a>
+        </div>
+    </header>
+
+    <main>
+        <h1>Wheel of Fortune</h1>
+
+        <div class="wheel-container">
+            <div id="wheel"></div>
+        </div>
+
+        <button id="spin-button" onclick="spinWheel()">Spin the Wheel!</button>
+
+        <p id="result-text">Spin the wheel to see your fortune score.</p>
+        <p id="message-text"></p>
+    </main>
+</body>
+</html>
