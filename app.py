@@ -131,6 +131,11 @@ def spin():
         "last_lucky_day": user.last_lucky_day.strftime('%Y-%m-%d') if user.last_lucky_day else None
     })
 
+@app.route('/zodiac')
+@login_required
+def zodiac():
+    return render_template('zodiac.html')
+
 @app.route('/logout')
 @login_required
 def logout():

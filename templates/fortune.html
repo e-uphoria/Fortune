@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wheel of Fortune</title>
-    <link rel="stylesheet" href="static/wheelstyle.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='wheelstyle.css') }}">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="app-bar">
+        <div class="streak-info">
+            <i class="fas fa-fire"></i>
+            <span id="streak">Lucky Streak: {{ streak }} days</span>
+        </div>
+        <div class="date-info">
+            <span id="last-lucky-day">Last Lucky Day: {{ last_lucky_day }}</span>
+        </div>
+        <div class="logout-button">
+            <a href="{{ url_for('logout') }}" class="logout-link">Logout</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h1>Wheel of Fortune</h1>
+
+        <div class="wheel-container">
+            <div id="wheel"></div>
+        </div>
+
+        <button id="spin-button" onclick="spinWheel()">Spin the Wheel!</button>
+
+        <p id="result-text">Spin the wheel to see your fortune score.</p>
+        <p id="message-text"></p>
+    </main>
+
+    <aside class="sidebar">
+        <img src="{{ url_for('static', filename='images/chinese_zodiac_2025.jpg') }}" alt="2025 Chinese Zodiac">
+        <a href="{{ url_for('zodiac') }}">Check Your Predictions For 2025</a>
+    </aside>
+
     <script>
         let isSpinning = false;
 
@@ -42,32 +75,5 @@
             }, 4000);
         }
     </script>
-</head>
-<body>
-    <header class="app-bar">
-        <div class="streak-info">
-            <i class="fas fa-fire"></i>
-            <span id="streak">Lucky Streak: {{ streak }} days</span>
-        </div>
-        <div class="date-info">
-            <span id="last-lucky-day">Last Lucky Day: {{ last_lucky_day }}</span>
-        </div>
-        <div class="logout-button">
-            <a href="{{ url_for('logout') }}" class="logout-link">Logout</a>
-        </div>
-    </header>
-
-    <main>
-        <h1>Wheel of Fortune</h1>
-
-        <div class="wheel-container">
-            <div id="wheel"></div>
-        </div>
-
-        <button id="spin-button" onclick="spinWheel()">Spin the Wheel!</button>
-
-        <p id="result-text">Spin the wheel to see your fortune score.</p>
-        <p id="message-text"></p>
-    </main>
 </body>
 </html>

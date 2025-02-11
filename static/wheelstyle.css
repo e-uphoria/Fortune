@@ -86,3 +86,36 @@ button {
 button:focus {
     outline: none;
 }
+
+.sidebar {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    right: 0;
+    top: 80px;
+    width: 200px;
+    border-left: 2px solid red;
+}
+
+.sidebar img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    display: block;
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    margin-right: 220px;
+}
