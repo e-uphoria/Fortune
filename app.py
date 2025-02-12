@@ -1,8 +1,12 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, session
 from flask_sqlalchemy import SQLAlchemy
+import bcrypt
+import string
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from datetime import datetime, timedelta
 import random
+from flask_mail import Mail, Message
+from config import MAIL_USERNAME, MAIL_PASSWORD
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'

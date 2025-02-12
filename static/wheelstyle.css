@@ -9,13 +9,14 @@ body {
 
 .app-bar {
     display: flex;
+    background: linear-gradient(45deg, #ff8c00, #ff6347);
+    padding: 1rem;
     justify-content: space-between;
     align-items: center;
-    background-color: red;
-    color: white;
-    padding: 1rem;
+    color: #fff;
     position: sticky;
     top: 0;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .streak-info, .date-info {
@@ -28,18 +29,19 @@ body {
 }
 
 .logout-link {
-    color: white;
+    color: white; /* fallback color */
     text-decoration: none;
     font-size: 1rem;
     padding: 10px 15px;
-    background-color: red;
+    background-image: linear-gradient(45deg, #ff8c00, #ff6347);
     border-radius: 8px;
 }
 
-.logout-link:hover {
+/*.logout-link:hover {
     background-color: white;
-    color: red;
-}
+    color: transparent; 
+    background-image: linear-gradient(45deg, #ff8c00, #ff6347);
+}*/
 
 .wheel-container {
     margin: 50px auto;
@@ -74,7 +76,7 @@ body {
 }
 
 button {
-    background-color: red;
+    background-image: linear-gradient(45deg, #ff8c00, #ff6347);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -95,7 +97,7 @@ button:focus {
     right: 0;
     top: 80px;
     width: 200px;
-    border-left: 2px solid red;
+    border-left: 2px solid linear-gradient(45deg, #ff8c00, #ff6347);
 }
 
 .sidebar img {
@@ -106,10 +108,13 @@ button:focus {
 
 .sidebar a {
     display: block;
-    color: red;
+    color: transparent; /* Fallback for text color */
     font-weight: bold;
     text-decoration: none;
     margin-top: 10px;
+    background-image: linear-gradient(45deg, #ff8c00, #ff6347);
+    -webkit-background-clip: text; /* Apply gradient to text */
+    background-clip: text; /* Standard property */
 }
 
 .sidebar a:hover {
@@ -118,4 +123,6 @@ button:focus {
 
 .main-content {
     margin-right: 220px;
+    color:#ff8c00;
 }
+

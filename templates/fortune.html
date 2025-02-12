@@ -22,7 +22,7 @@
     </header>
 
     <main class="main-content">
-        <h1>Wheel of Fortune</h1>
+        <h1>How Lucky Are You Today?</h1>
 
         <div class="wheel-container">
             <div id="wheel"></div>
@@ -30,7 +30,7 @@
 
         <button id="spin-button" onclick="spinWheel()">Spin the Wheel!</button>
 
-        <p id="result-text">Spin the wheel to see your fortune score.</p>
+        <p id="result-text">Spin the wheel to see your luck score.</p>
         <p id="message-text"></p>
     </main>
 
@@ -66,7 +66,7 @@
                 })
                 .then(response => response.json())
                 .then(data => {
-                    resultText.innerText = `Your fortune score: ${data.score}`;
+                    resultText.innerText = `Your luck score: ${data.score}`;
                     messageText.innerText = data.message;
                     document.getElementById("streak").innerText = `Lucky Streak: ${data.streak} days`;
                     document.getElementById("last-lucky-day").innerText = `Last Lucky Day: ${data.last_lucky_day || "N/A"}`;
