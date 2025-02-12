@@ -136,6 +136,66 @@ def spin():
 def zodiac():
     return render_template('zodiac.html')
 
+@app.route('/rat')
+@login_required
+def rat():
+    return render_template('rat.html')
+
+@app.route('/ox')
+@login_required
+def ox():
+    return render_template('ox.html')
+
+@app.route('/tiger')
+@login_required
+def tiger():
+    return render_template('tiger.html')
+
+@app.route('/rabbit')
+@login_required
+def rabbit():
+    return render_template('rabbit.html')
+
+@app.route('/dragon')
+@login_required
+def dragon():
+    return render_template('dragon.html')
+
+@app.route('/snake')
+@login_required
+def snake():
+    return render_template('snake.html')
+
+@app.route('/horse')
+@login_required
+def horse():
+    return render_template('horse.html')
+
+@app.route('/goat')
+@login_required
+def goat():
+    return render_template('goat.html')
+
+@app.route('/monkey')
+@login_required
+def monkey():
+    return render_template('monkey.html')
+
+@app.route('/rooster')
+@login_required
+def rooster():
+    return render_template('rooster.html')
+
+@app.route('/dog')
+@login_required
+def dog():
+    return render_template('dog.html')
+
+@app.route('/pig')
+@login_required
+def pig():
+    return render_template('pig.html')
+
 @app.route('/logout')
 @login_required
 def logout():

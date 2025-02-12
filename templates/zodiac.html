@@ -4,36 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chinese Zodiac Predictions 2025</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-        .zodiac-list {
-            margin-top: 20px;
-        }
-        .zodiac-item {
-            font-size: 1.2rem;
-            margin: 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='zodiac.css') }}">
 </head>
 <body>
-    <h1>Chinese Zodiac Predictions for 2025</h1>
-    <div class="zodiac-list">
-        <div class="zodiac-item">🐭 Rat — 1924, 1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020</div>
-        <div class="zodiac-item">🐂 Ox — 1925, 1937, 1949, 1961, 1973, 1985, 1997, 2009, 2021</div>
-        <div class="zodiac-item">🐅 Tiger — 1926, 1938, 1950, 1962, 1974, 1986, 1998, 2010, 2022</div>
-        <div class="zodiac-item">🐇 Rabbit — 1927, 1939, 1951, 1963, 1975, 1987, 1999, 2011, 2023</div>
-        <div class="zodiac-item">🐉 Dragon — 1928, 1940, 1952, 1964, 1976, 1988, 2000, 2012, 2024</div>
-        <div class="zodiac-item">🐍 Snake — 1929, 1941, 1953, 1965, 1977, 1989, 2001, 2013, 2025</div>
-        <div class="zodiac-item">🐎 Horse — 1930, 1942, 1954, 1966, 1978, 1990, 2002, 2014, 2026</div>
-        <div class="zodiac-item">🐐 Goat — 1931, 1943, 1955, 1967, 1979, 1991, 2003, 2015, 2027</div>
-        <div class="zodiac-item">🐒 Monkey — 1932, 1944, 1956, 1968, 1980, 1992, 2004, 2016, 2028</div>
-        <div class="zodiac-item">🐓 Rooster — 1933, 1945, 1957, 1969, 1981, 1993, 2005, 2017, 2029</div>
-        <div class="zodiac-item">🐕 Dog — 1934, 1946, 1958, 1970, 1982, 1994, 2006, 2018, 2030</div>
-        <div class="zodiac-item">🐖 Pig — 1935, 1947, 1959, 1971, 1983, 1995, 2007, 2019, 2031</div>
+    <h1>Chinese Horoscope 2025 Predictions</h1>
+    <div class="zodiac-container">
+        <!-- Row 1 -->
+        <div class="zodiac-card">
+            <a href="{{ url_for('rat') }}">
+            <img src="{{ url_for('static', filename='images/rat.jpg') }}" alt="Rat">
+            <h2>Rat</h2>
+            <p>1924, 1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020</p>
+            </a>
+        </div>
+        <div class="zodiac-card">
+            <a href="{{ url_for('ox') }}">
+            <img src="{{ url_for('static', filename='images/ox.png') }}" alt="Ox">
+            <h2>Ox</h2>
+            <p>1925, 1937, 1949, 1961, 1973, 1985, 1997, 2009, 2021</p>
+            </a>
+        </div>
+        <div class="zodiac-card">
+            <a href="{{ url_for('tiger') }}">
+            <img src="{{ url_for('static', filename='images/tiger.jpg') }}" alt="Tiger">
+            <h2>Tiger</h2>
+            <p>1926, 1938, 1950, 1962, 1974, 1986, 1998, 2010, 2022</p>
+            </a>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="zodiac-card">
+            <a href="{{ url_for('rabbit') }}">
+            <img src="{{ url_for('static', filename='images/rabbit.png') }}" alt="Rabbit">
+            <h2>Rabbit</h2>
+            <p>1927, 1939, 1951, 1963, 1975, 1987, 1999, 2011, 2023</p>
+            </a>   
+        </div>
+        <div class="zodiac-card">
+            <a href="{{ url_for('dragon') }}">
+            <img src="{{ url_for('static', filename='images/dragon.jpg') }}" alt="Dragon">
+            <h2>Dragon</h2>
+            <p>1928, 1940, 1952, 1964, 1976, 1988, 2000, 2012, 2024</p>
+            </a>
+        </div>
+        <div class="zodiac-card">
+            <a href="{{ url_for('snake') }}">
+            <img src="{{ url_for('static', filename='images/snake.png') }}" alt="Snake">
+            <h2>Snake</h2>
+            <p>1929, 1941, 1953, 1965, 1977, 1989, 2001, 2013, 2025</p>
+            </a>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="zodiac-card">
+            <a href="{{ url_for('horse') }}">
+            <img src="{{ url_for('static', filename='images/horse.jpg') }}" alt="Horse">
+            <h2>Horse</h2>
+            <p>1930, 1942, 1954, 1966, 1978, 1990, 2002, 2014, 2026</p>
+            </a>
+        </div>
+        <div class="zodiac-card">
+            <a href="{{ url_for('goat') }}">
+            <img src="{{ url_for('static', filename='images/goat.jpg') }}" alt="Goat">
+            <h2>Goat</h2>
+            <p>1931, 1943, 1955, 1967, 1979, 1991, 2003, 2015, 2027</p>
+            </a>
+        </div>
+        <div class="zodiac-card">
+            <a href="{{ url_for('monkey') }}">
+            <img src="{{ url_for('static', filename='images/monkey.png') }}" alt="Monkey">
+            <h2>Monkey</h2>
+            <p>1932, 1944, 1956, 1968, 1980, 1992, 2004, 2016, 2028</p>
+            </a>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="zodiac-card">
+            <a href="{{ url_for('rooster') }}">
+            <img src="{{ url_for('static', filename='images/rooster.jpg') }}" alt="Rooster">
+            <h2>Rooster</h2>
+            <p>1933, 1945, 1957, 1969, 1981, 1993, 2005, 2017, 2029</p>
+            </a>
+        </div>
+        <div class="zodiac-card">
+            <a href="{{ url_for('dog') }}">
+            <img src="{{ url_for('static', filename='images/dog.png') }}" alt="Dog">
+            <h2>Dog</h2>
+            <p>1934, 1946, 1958, 1970, 1982, 1994, 2006, 2018, 2030</p>
+            </a>
+        </div>
+        <div class="zodiac-card">
+            <a href="{{ url_for('pig') }}">
+            <img src="{{ url_for('static', filename='images/pig.jpg') }}" alt="Pig">
+            <h2>Pig</h2>
+            <p>1935, 1947, 1959, 1971, 1983, 1995, 2007, 2019, 2031</p>
+            </a>
+        </div>
     </div>
 </body>
 </html>

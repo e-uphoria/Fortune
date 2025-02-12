@@ -1,0 +1,109 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body and Background */
+body {
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(45deg, #ff8c00, #ff6347);
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.zodiac-img {
+    max-width: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Section Styles */
+section {
+    margin: 40px 0;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+section p, section ul {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+/* Call-to-Action Footer */
+footer {
+    background-color: #ff6347;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .zodiac-img {
+        max-width: 120px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
