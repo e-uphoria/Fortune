@@ -4,10 +4,10 @@
 
    ## Features
    
-     - 🎡 Fortune Wheel: Spin a wheel to determine daily luck.
-     - 💬 Gen Z Remarks: After the wheel stops spinning, a luck score is displayed with a fun, relatable gen Z remark.
-     - 🔥 Lucky Streak Tracker: Keeps a record of consecutive lucky days.
-     - 📅 Last Lucky Day Record: Stores the last day the user got lucky.
-     - 🏮 Chinese Zodiac Predictions: Displays all 12 zodiac signs with year 2025 predictions when selected.
-     - 🛠️ Built With: Flask (backend), SQLite (database), HTML & CSS (frontend).
+   * 🎡 Fortune Wheel: Spin a wheel to determine daily luck.
+   * 💬 Gen Z Remarks: After the wheel stops spinning, a luck score is displayed with a fun, relatable gen Z remark.
+   * 🔥 Lucky Streak Tracker: Keeps a record of consecutive lucky days.
+   * 📅 Last Lucky Day Record: Stores the last day the user got lucky.
+   * 🏮 Chinese Zodiac Predictions: Displays all 12 zodiac signs with year 2025 predictions when selected.
+   * 🛠️ Built With: Flask (backend), SQLite (database), HTML & CSS (frontend).
     
