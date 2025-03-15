@@ -6,7 +6,7 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from datetime import datetime, timedelta
 import random
 from flask_mail import Mail, Message
-from config import MAIL_USERNAME, MAIL_PASSWORD
+#from config import MAIL_USERNAME, MAIL_PASSWORD
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
